@@ -14,14 +14,15 @@ def translate(w):
         elif yn == "N":
             return "The word doesn't exist. Please double check it."
         else:
-            return "We didn't understand your entry."
+            return "Please check the entry."
     else:
         return "The word doesn't exist. Please double check it."
 
-word = input("Enter word: ")
+word = input("Enter Word: ")
 output = translate(word)
 if type(output) == list:
     for item in output:
         print(item)
 else:
+    print('Translation: ')
     print(output)
